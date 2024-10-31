@@ -1,0 +1,106 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    min-width: 280px;
+    overflow-x: hidden;
+    font-family: sans-serif;
+    font-size: 1em;
+    background: rgb(223, 223, 223);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 0;
+    padding: 40px 16px 0px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    max-width: 440px;
+    padding: 40px 16px 32px;
+}
+
+button {
+    transition: background-color 0.3s ease;
+    appearance: none;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 12px;
+    margin-top: 24px;
+    background: rgb(174, 220, 255);
+    border: 1px solid rgb(174, 220, 255);
+    border-radius: 4px;
+    font-size: inherit;
+}
+
+button:hover {
+    background: rgb(215, 238, 255);
+}
+
+.cacher {
+    display: none;
+}
+
+.liste-indices {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0;
+}
+
+.liste-indices li {
+    font-style: italic;
+    position: relative;
+    padding: 16px 16px 16px 44px;
+    border: 1px solid rgb(240, 240, 240);
+    border-radius: 4px;
+}
+
+.liste-indices li::before {
+    content: '«';
+    position: absolute;
+    top: 0;
+    left: 8px;
+    transform: translate(0, -50%);
+    font-size: 1.5rem;
+}
+
+.liste-indices blockquote {
+    margin: 0;
+}
+
+.mt-md {
+    margin-top: 24px;
+}
+
+#enigme-courante {
+    padding: 16px 12px;
+    background: rgb(240, 240, 240);
+    font-size: 1.15rem;
+    text-align: center;
+    border-radius: 4px;
+}
+
+#commentaire-enigme {
+    color: green;
+}
+
+#commentaire-enigme.erreur {
+    color: red;
+}
